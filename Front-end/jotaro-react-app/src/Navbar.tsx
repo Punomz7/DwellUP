@@ -50,6 +50,9 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, user }) => {
   </a>
 </li>
 
+ 
+    <li><a href="/appointments" className="hover:text-blue-600">Appointments</a></li>
+
     <li><a href="/account" className="hover:text-blue-600">Account</a></li>
     <li>
   <button
