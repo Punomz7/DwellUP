@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
           </a>
         </div>
 
-        {/* 🧭 Top Links */}
+      
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-center font-medium">
           {[
             'About us', 'Careers', 'Accessibility', 'Feedback', 'Media room',

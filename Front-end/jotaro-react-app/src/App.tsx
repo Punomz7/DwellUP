@@ -7,6 +7,8 @@ import AdminPage from './AdminPage';
 import UserPage from './UserPage';
 import AgentPage from './AgentPage';
 import Home from './Home';
+import Appointments from './Appointments';
+import PropertyPage from './PropertyPage';
 
 import AccountPage from './AccountPage';
 
@@ -62,7 +64,7 @@ const AppContent: React.FC<{
             <div className="Main_page">
               
               <video autoPlay loop muted className="background-video">
-                <source src="/grass9.mp4" type="video/mp4" />
+                <source src="/grass.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               
@@ -101,8 +103,24 @@ const AppContent: React.FC<{
             </PrivateRoute>
           }
         />
+
+         <Route
+          path="/property/:id"
+          element={
+            <PrivateRoute user={user}>
+              <PropertyPage darkMode={darkMode} toggleDarkMode={toggleDarkMode} user={user} />
+            </PrivateRoute>
+          }
+        />
       
-        
+        <Route
+          path="/appointments"
+          element={
+            <PrivateRoute user={user}>
+              <Appointments darkMode={darkMode} toggleDarkMode={toggleDarkMode} user={user} />
+            </PrivateRoute>
+          }
+        />
        
         <Route
           path="/userlist"
